@@ -29,4 +29,7 @@ urlpatterns = [
 
     # post_service app
     url(r'^board/', include('post_service.urls')),
+
+    # user_manager app
+    url(r'^user/', include('user_manager.urls'))
 ]

@@ -46,7 +46,9 @@ INSTALLED_APPS = (
     # blog app
     'blog',
     # post_service app
-    'post_service'
+    'post_service',
+    # user_manager app
+    'user_manager',
 )
 
 MIDDLEWARE_CLASSES = (
