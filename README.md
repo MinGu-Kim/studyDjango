@@ -7,5 +7,6 @@ Basics
 =====
 Basics
 * http://raccoonyy.github.io/django-rest-framework-tutorial-by-devissue/
+
 Tutorial
 * http://raccoonyy.github.io/tag/drf3/
