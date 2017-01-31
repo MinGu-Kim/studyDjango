@@ -21,14 +21,14 @@ class Snippet(models.Model):
     class Meta:
         ordering = ('created',)
 
-def save(self, *args, **kwargs):
-    """
-    `pygments` 라이브러리를 사용하여 하이라이트된 코드를 만든다.
-    """
-    lexer = get_lexer_by_name(self.language)
-    linenos = self.linenos and 'table' or False
-    options = self.title and {'title': self.title} or {}
-    formatter = HtmlFormatter(style=self.style, linenos=linenos,
-                              full=True, **options)
-    self.highlighted = highlight(self.code, lexer, formatter)
-    super(Snippet, self).save(*args, **kwargs)
+    def save(self, *args, **kwargs):
+        """
+        `pygments` 라이브러리를 사용하여 하이라이트된 코드를 만든다.
+        """
+        lexer = get_lexer_by_name(self.language)
+        linenos = self.linenos and 'table' or False
+        options = self.title and {'title': self.title} or {}
+        formatter = HtmlFormatter(style=self.style, linenos=linenos,
+                                  full=True, **options)
+        self.highlighted = highlight(self.code, lexer, formatter)
+        super(Snippet, self).save(*args, **kwargs)

@@ -1,19 +1,14 @@
 from django.contrib.auth.models import User
-from django.http import Http404
 from requests import Response
 from rest_framework import generics
-from rest_framework import mixins
 from rest_framework import permissions
 from rest_framework import renderers
-from rest_framework import status
 from rest_framework.decorators import api_view
 from rest_framework.reverse import reverse
-from rest_framework.views import APIView
 
 from snippets.models import Snippet
 from snippets.permission import IsOwnerOrReadOnly
 from snippets.serializers import SnippetSerializer, UserSerializer
-from rest_framework.generics import GenericAPIView
 
 class SnippetList(generics.ListCreateAPIView):
     queryset = Snippet.objects.all()
