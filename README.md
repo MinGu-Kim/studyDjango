@@ -10,3 +10,6 @@ Basics
 
 Tutorial
 * http://raccoonyy.github.io/tag/drf3/
+
+Blog API with Django Rest Framework
+* https://www.youtube.com/watch?v=XMu0T6L2KRQ&list=PLEsfXFp6DpzTOcOVdZF-th7BS_GYGguAS
