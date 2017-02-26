@@ -2,7 +2,6 @@ from django.contrib import auth
 from django.contrib.auth.models import User
 from django.shortcuts import render, redirect
 from django.template import Context
-from django.template.context_processors import csrf
 from django.template.loader import get_template
 from django.http.response import HttpResponse
 from user_manager.forms import *
